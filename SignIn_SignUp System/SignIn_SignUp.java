@@ -27,6 +27,7 @@ public  class SignIn_SignUp extends FileHandlingSignIn_SingUp{
 
                     case '1': {
                         create();
+                        break;
                     }
                     case '2': {
                         System.out.println("Enter login details");
@@ -61,6 +62,8 @@ public  class SignIn_SignUp extends FileHandlingSignIn_SingUp{
 
 
                         }
+                        
+                        break;
                     }
                     case '3': {
                         System.out.println(" Enter your details");
@@ -77,11 +80,11 @@ public  class SignIn_SignUp extends FileHandlingSignIn_SingUp{
 
                         write_file(name, password, gmail);
 
-
+                       break;
                     }
                     case '4': {
                         delete();
-
+                        break;
                     }
                     case '5': {
                         break;
