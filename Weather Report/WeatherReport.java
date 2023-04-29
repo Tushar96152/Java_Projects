@@ -65,24 +65,4 @@ public class  WeatherReport extends Geocoding {
     }
 
 }
-/* communiccation
-1. request for connection
-2. wait for the respose
-3. if response=200
 
-Https -: get , post , update , delete..
-request - response between client and server
-client - request generation()
-server - response (code)
-
-{"coord":{"lon":26.9155,"lat":75.819},
-"weather":[{"id":804,"main":"Clouds","description":"overcast clouds","icon":"04n"}],
-"base":"stations",
-"main":{"temp":275.38,"feels_like":268.54,"temp_min":275.38,"temp_max":275.38,"pressure":1022,"humidity":88,"sea_level":1022,"grnd_level":1022},
-"visibility":10000,
-"wind":{"speed":11.91,"deg":166,"gust":17.06},
-"clouds":{"all":100},
-"dt":1682686985,
-"sys":{"sunrise":0,"sunset":0},
-"timezone":7200,"id":0,"name":"","cod":200}
- */
