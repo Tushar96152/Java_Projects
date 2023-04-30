@@ -10,8 +10,8 @@ public class RockPaperScissorGame {
         return option[index];
     }
     static void guessOption(){
-        int u=0;
-        int c=0;
+        int user=0;
+        int con=0;
         System.out.println("   ");
         System.out.println("   ");
         System.out.println("WELCOME TO THE GAME:-");
@@ -22,14 +22,12 @@ public class RockPaperScissorGame {
         for(int i=1;i<6;i++){
             String a=gen_Option();
             System.out.println("Round "+i+"/5 :-");
-            System.out.println("Choose one of the following options:");
-            System.out.println("1 :- For Stone.");
-            System.out.println("2 :- For Paper.");
-            System.out.println("3 :- For Scissor.");
-            System.out.println("         ");
-            System.out.print("Enter your pick:- ");
+            System.out.println("Choose one of the following options:\n");
+            System.out.println("1. Stone.\n2.  Paper.\n3. Scissor.");       
+            System.out.print("choose your option one of them\n");
+            
             Scanner sc = new Scanner(System.in);
-            int guess=sc.nextInt();
+            int guess=sc.nextInt();          //input
             String guess2="";
             if(guess == 1){
                 guess2="Stone";
@@ -41,51 +39,60 @@ public class RockPaperScissorGame {
                 System.out.println("Wrong Input");
                 break;
             }
+            
             System.out.println("Your Pick: "+guess2);
             System.out.println("Opponent's Pick: "+a);
             if(guess2.equalsIgnoreCase(a)){
                 System.out.println("Result: It's a Draw!!!");
-                System.out.println("      ");
-                u++;
-                c++;
-            } else if (a.equalsIgnoreCase("Stone")&& guess2.equalsIgnoreCase("Paper")) {
+                
+                user++;
+                con++;
+            } 
+            else if (a.equalsIgnoreCase("Stone")&& guess2.equalsIgnoreCase("Paper")) {
                 System.out.println("Result: You win!!!");
-                System.out.println("       ");
-                u++;
+                
+                user++;
             }
             else if (a.equalsIgnoreCase("Stone")&& guess2.equalsIgnoreCase("Scissor")) {
                 System.out.println("Result: You Lose!!!");
-                System.out.println("        ");
-                c++;
+               
+                con++;
 
-            } else if (a.equalsIgnoreCase("Paper")&& guess2.equalsIgnoreCase("Stone")) {
+            }
+            else if (a.equalsIgnoreCase("Paper")&& guess2.equalsIgnoreCase("Stone")) {
                 System.out.println("Result: You Lose!!!");
-                System.out.println("         ");
-                c++;
+               
+                con++;
 
-            } else if (a.equalsIgnoreCase("Paper")&& guess2.equalsIgnoreCase("Scissor")) {
+            }
+            else if (a.equalsIgnoreCase("Paper")&& guess2.equalsIgnoreCase("Scissor")) {
                 System.out.println("Result: You win!!!");
-                System.out.println("          ");
-                u++;
+              
+                user++;
 
-            } else if (a.equalsIgnoreCase("Scissor")&& guess2.equalsIgnoreCase("Stone")) {
+            }
+            else if (a.equalsIgnoreCase("Scissor")&& guess2.equalsIgnoreCase("Stone")) {
                 System.out.println("Result: You win!!!");
-                System.out.println("           ");
-                u++;
+                
+                user++;
 
-            } else if (a.equalsIgnoreCase("Scissor")&& guess2.equalsIgnoreCase("Paper")) {
+            } 
+            else if (a.equalsIgnoreCase("Scissor")&& guess2.equalsIgnoreCase("Paper")) {
                 System.out.println("Result: You Lose!!!");
-                System.out.println("           ");
-                c++;
+                
+                con++;
             }
         }
-        if(u>c){
+           // counting comparison
+        if(user > con){
             System.out.println("YOU WON THE GAME!!!!.");
-        } else if (c == u) {
+        }
+        else if (con == user) {
             System.out.println("GAME ENDED IN A DRAW.");
 
-        }else if(c>u) {
-            System.out.println("YOU LOST!! BETTER LUCK NEXT TIME.");
+        }
+        else if(con > user) {
+            System.out.println("YOU LOST  BETTER LUCK NEXT TIME.");
         }
 
     }
