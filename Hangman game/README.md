@@ -1,1 +1,1 @@
-
+The Hangman Game project in Java is an engaging word-guessing game designed to provide entertainment and challenge players' vocabulary skills. Developed as an internship project, this command-line game offers a user-friendly interface. Players will have to guess letters to uncover a secret word while avoiding incorrect guesses that can lead to defeat. With a built-in word database, visual representation, score tracking, and error handling, this project aims to deliver an enjoyable gaming experience for users.
